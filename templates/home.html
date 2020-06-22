@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}User | {{name}}{% endblock %}
+
+{% block body %}
+<br>
+<a class="link" href="{{url_for('index')}}">Logout</a>
+<div class="center">
+<h1>Welcome Home, {{name}} !!</h1>
+<h2>Search for Books</h2>
+<form action="home" method="post">
+  <select class="box1" name="Type">
+    <option value="isbn">ISBN</option>
+    <option value="title">Title</option>
+    <option value="author">Author</option>
+    <option value="year">Year</option>
+  </select>
+  <input type="text" class="box1" name="book">
+  <input type="submit" name="Click" value="Search">
+</form>
+</div>
+<br>
+<ol>
+  {% for book in books %}
+  <li><a class="link" href="{{url_for('onebook',book_isbn=book.isbn)}}">{{ book.title }}</a></li>
+  {% endfor %}
+</ol>
+
+{% endblock %}

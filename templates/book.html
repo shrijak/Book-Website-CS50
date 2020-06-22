@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}Book | {{ book.title }}{% endblock %}
+
+{% block body %}
+<div class="center">
+<h1 class="title">Book</h1>
+<h2>Title: {{ book.title }}</h2>
+<h2>Author: {{book.author}}</h2>
+<h2>Year: {{book.year}}</h2>
+<h2>ISBN: {{ book.isbn }}</h2>
+<hr>
+{%if flag == 0 %}
+<h1>Please give your rating and review here:</h1>
+<form action="{{url_for('onebook',book_isbn=book.isbn)}}" method="post">
+  <label><strong>Rating: </strong></label>
+  <select class="box1" name="rating">
+    <option value="1">⭐</option>
+    <option value="2">⭐⭐</option>
+    <option value="3">⭐⭐⭐</option>
+    <option value="4">⭐⭐⭐⭐</option>
+    <option value="5">⭐⭐⭐⭐⭐</option>
+  </select><br><br>
+  <label><strong>Review: </strong></label><br>
+  <textarea class="box" name="review" placeholder="Your review Here!" rows="10" cols="20"></textarea>
+  <br>
+  <input type="submit" name="name">
+</form>
+{%else%}
+<br>
+<h2>Your review is "{{myreview.review}}"</h2>
+<h2>Your rating is {{myreview.rating}}</h2>
+{%endif%}
+
+{% for i in res['books'] %}
+<br>
+<hr>
+<h1>Review from Goodreads:</h1>
+<h2>Average Rating: {{i.average_rating}}</h2>
+<h2>Review Count: {{i.work_ratings_count}}</h2>
+{%endfor%}
+</div>
+<a class="link" href="{{url_for('home')}}">Go Back</a>
+{% endblock %}

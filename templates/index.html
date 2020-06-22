@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Books Review- Log In or Sign Up{% endblock %}
+
+{% block body %}
+<h1 class="title">Books Review</h1>
+<div class="sign">
+<h2>Sign In</h2>
+<form action="home" method="post">
+  <input type="email" class="box" name="user" placeholder="Email"><br>
+  <input type="password" class="box" name="pass" placeholder="Password"><br>
+  <input type="submit" name="Click" value="Login">
+</form>
+</div>
+<hr>
+<div class="sign">
+<h2>Sign Up</h2>
+<form action="home" autocomplete="off" method="post">
+  <input type="text" class="box" name="name" placeholder="Name"><br>
+  <input type="email" class="box" name="email" placeholder="abc@mail.com"><br>
+  <input type="password" class="box" name="passsign" placeholder="Password"><br><br>
+  <label>Date Of Birth</label><br>
+  <input type="date" class="box" name="dob"><br><br>
+  <label>Gender:</label>
+  <input type="radio" name="gender" value="Male">
+  <label>Male</label>
+  <input type="radio" name="gender" value="Female">
+  <label>Female</label><br>
+  <input type="submit" name="Click" value="Register">
+</form>
+</div>
+{% endblock %}
