@@ -1,4 +1,4 @@
-# Project 1
+# Project 2
 
 ## Harvard University CS50 Web Programming with Python and JavaScript
 
