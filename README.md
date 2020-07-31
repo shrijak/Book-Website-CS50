@@ -4,6 +4,8 @@
 
 ## Flask and SQL 
 
+## Page Video: https://drive.google.com/file/d/1-lhSKRdA8i2iYCc36knzYHPiDQumtqZ7/view?usp=sharing
+
 # index.html
 
 ### - This page is the first page whic is seen by the user
