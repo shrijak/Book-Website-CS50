@@ -4,7 +4,7 @@
 
 ## Flask and SQL 
 
-## Page Video: https://drive.google.com/file/d/1-lhSKRdA8i2iYCc36knzYHPiDQumtqZ7/view?usp=sharing
+## Webpage Video: https://drive.google.com/file/d/1-lhSKRdA8i2iYCc36knzYHPiDQumtqZ7/view?usp=sharing
 
 # index.html
 
